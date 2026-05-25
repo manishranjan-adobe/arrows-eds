@@ -1,7 +1,7 @@
 {
   "public": {
     "default": {
-      "commerce-core-endpoint": "http://develop-sr3snxi-36sz2j46xme76.us-4.magentosite.cloud/graphql",
+      "commerce-core-endpoint": "https://develop-sr3snxi-36sz2j46xme76.us-4.magentosite.cloud/graphql",
       "commerce-endpoint": "https://catalog-service-sandbox.adobe.io/graphql",
       "commerce-assets-enabled": false,
       "headers": {
@@ -25,7 +25,7 @@
         "store-code": "default",
         "store-id": 1,
         "store-name": "Main Website Store",
-        "store-url": "http://develop-sr3snxi-36sz2j46xme76.us-4.magentosite.cloud",
+        "store-url": "https://develop-sr3snxi-36sz2j46xme76.us-4.magentosite.cloud",
         "store-view-code": "default",
         "store-view-id": 1,
         "store-view-name": "Default Store View",
