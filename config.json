@@ -1,7 +1,7 @@
 {
   "public": {
     "default": {
-      "commerce-core-endpoint": "https://develop-sr3snxi-36sz2j46xme76.us-4.magentosite.cloud/graphql",
+      "commerce-core-endpoint": "http://staging-5em2ouy-36sz2j46xme76.us-4.magentosite.cloud/graphql",
       "commerce-endpoint": "https://catalog-service-sandbox.adobe.io/graphql",
       "commerce-assets-enabled": false,
       "headers": {
@@ -12,20 +12,20 @@
           "Magento-Store-Code": "main_website_store",
           "Magento-Store-View-Code": "default",
           "Magento-Website-Code": "base",
-          "x-api-key": "386756264a4648bb82a69c25cf0d0a5c",
-          "Magento-Environment-Id": "bba5186c-8bec-42d9-baf7-c57b57fbf07f"
+          "x-api-key": "e44dbd303ffd4c7c80f4ebab6e6e254d",
+          "Magento-Environment-Id": "4d19225e-d8e0-435f-a47e-4949a04db449"
         }
       },
       "analytics": {
         "aep-ims-org-id": null,
         "aep-datastream-id": null,
         "base-currency-code": "USD",
-        "environment": "Development",
+        "environment": "Staging",
         "environment-id": null,
         "store-code": "default",
         "store-id": 1,
         "store-name": "Main Website Store",
-        "store-url": "https://develop-sr3snxi-36sz2j46xme76.us-4.magentosite.cloud",
+        "store-url": "http://staging-5em2ouy-36sz2j46xme76.us-4.magentosite.cloud/",
         "store-view-code": "default",
         "store-view-id": 1,
         "store-view-name": "Default Store View",
