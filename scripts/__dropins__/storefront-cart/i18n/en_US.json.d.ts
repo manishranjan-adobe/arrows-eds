@@ -161,6 +161,23 @@ declare const _default: {
       "alert": "Out of stock",
       "action": "Remove all out of stock items from cart"
     },
+    "FreeGiftSelection": {
+      "title": "Choose your free gift",
+      "subtitle": "Use Add to cart on each offer. If a product has options, choose Select, pick your options, then Add to cart.",
+      "loading": "Loading choices…",
+      "empty": "No gift options are available right now.",
+      "error": "We could not load gift choices. Try again.",
+      "cancel": "Close",
+      "ariaModal": "Free gift selection",
+      "openTrigger": "Choose your free gift",
+      "openTriggerHint": "You have free gifts to choose from.",
+      "addedMessagePrefix": "Free gift added to your cart:",
+      "chooseOption": "Choose an option",
+      "configureRequired": "Choose all required options for your free gift.",
+      "ruleLabelFallback": "Free gift offer",
+      "selectProduct": "Select Options",
+      "addToCart": "Add to Cart"
+    },
     "GiftOptions": {
       "formText": {
         "requiredFieldError": "This field is required"
