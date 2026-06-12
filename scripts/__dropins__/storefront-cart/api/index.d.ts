@@ -32,4 +32,5 @@ export * from './publishShoppingCartViewEvent';
 export * from './applyGiftCardToCart';
 export * from './removeGiftCardFromCart';
 export * from './setGiftOptionsOnCart';
+export * from './selectFreeGiftForCart';
 //# sourceMappingURL=index.d.ts.map

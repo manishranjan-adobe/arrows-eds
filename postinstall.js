@@ -31,6 +31,28 @@ fs.readdirSync('node_modules/@dropins', { withFileTypes: true }).forEach((file) 
   });
 });
 
+// Copy specified files from node_modules/@manisranjan to scripts/__dropins__
+// These packages ship files inside dist/ instead of at the package root
+if (fs.existsSync('node_modules/@manisranjan')) {
+  fs.readdirSync('node_modules/@manisranjan', { withFileTypes: true }).forEach((file) => {
+    if (!dependencies[`@manisranjan/${file.name}`]) {
+      return;
+    }
+
+    if (!file.isDirectory()) {
+      return;
+    }
+
+    const distDir = path.join('node_modules', '@manisranjan', file.name, 'dist');
+    const srcDir = fs.existsSync(distDir) ? distDir : path.join('node_modules', '@manisranjan', file.name);
+    fs.cpSync(srcDir, path.join(dropinsDir, file.name), {
+      recursive: true,
+      filter: (src) => (!src.endsWith('package.json')),
+    });
+  });
+}
+
+
 // Other files to copy
 [
   { from: '@adobe/magento-storefront-event-collector/dist/index.js', to: 'commerce-events-collector.js' },

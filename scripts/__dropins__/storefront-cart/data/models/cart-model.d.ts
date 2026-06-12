@@ -1,19 +1,5 @@
-/********************************************************************
- * ADOBE CONFIDENTIAL
- * __________________
- *
- *  Copyright 2024 Adobe
- *  All Rights Reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of Adobe and its suppliers, if any. The intellectual
- * and technical concepts contained herein are proprietary to Adobe
- * and its suppliers and are protected by all applicable intellectual
- * property laws, including trade secret and copyright laws.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from Adobe.
- *******************************************************************/
+import { AvailableFreeGiftRule } from './free-gift-selection.js';
+
 export interface CartModel {
     totalGiftOptions: {
         giftWrappingForItems: Price;
@@ -70,6 +56,13 @@ export interface CartModel {
     hasOutOfStockItems?: boolean;
     hasFullyOutOfStockItems?: boolean;
     appliedCoupons?: Coupon[];
+    /**
+     * From `Cart.has_available_free_gifts` (SalesRuleFreeGift). When true, show free-gift selection
+     * for rules listed on `availableFreeGifts`.
+     */
+    hasAvailableFreeGifts?: boolean;
+    /** From `Cart.available_free_gifts` — rules still needing a SKU / option selection. */
+    availableFreeGifts?: AvailableFreeGiftRule[];
 }
 export interface AppliedGiftCardProps {
     code: string;
@@ -86,6 +79,16 @@ interface TotalPriceModifier {
 interface FixedProductTax {
     amount: Price;
     label: string;
+}
+export interface CustomizableOptionEntry {
+    uid: string;
+    label: string;
+    type: string;
+    values: {
+        uid: string;
+        label: string;
+        value: string;
+    }[];
 }
 export interface Item {
     giftWrappingAvailable: boolean;
@@ -140,6 +143,9 @@ export interface Item {
     customizableOptions?: {
         [key: string]: any;
     };
+    customizableOptionEntries?: CustomizableOptionEntry[];
+    /** From `CartItemInterface.is_free_gift` (SalesRuleFreeGift). */
+    isFreeGift?: boolean;
     message?: string;
     recipient?: string;
     recipientEmail?: string;
