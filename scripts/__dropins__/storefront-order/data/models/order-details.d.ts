@@ -59,8 +59,6 @@ export type OrderItemModel = {
         };
         price: MoneyProps;
     }[];
-    freeGiftLabel?: string | null;
-    isFreeGift?: boolean;
     taxCalculations: {
         includeAndExcludeTax: {
             originalPrice: MoneyProps;
@@ -195,6 +193,7 @@ export type OrderDataModel = {
     shippingMethod?: string;
     carrier?: string;
     orderDate: string;
+    adminAssistedOrder?: boolean;
     comments: OrderCommentItem[];
     returns: OrdersReturnPropsModel[];
     discounts: {

@@ -25,5 +25,4 @@ export * from './OrderSummaryLine';
 export * from './GiftCards';
 export * from './GiftOptions';
 export * from './CartSummaryTable';
-export * from './FreeGiftSelection';
 //# sourceMappingURL=index.d.ts.map

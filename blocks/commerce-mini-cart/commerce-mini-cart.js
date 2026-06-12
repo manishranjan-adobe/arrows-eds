@@ -5,9 +5,9 @@ import { tryRenderAemAssetsImage } from '@dropins/tools/lib/aem/assets.js';
 import {
   InLineAlert,
   Icon,
+  Price,
   provider as UI,
   Button,
-  Price,
 } from '@dropins/tools/components.js';
 import { h } from '@dropins/tools/preact.js';
 
@@ -205,6 +205,7 @@ export default async function decorate(block) {
           ctx.appendChild(editLinkContainer);
         }
       },
+
       Footer: (ctx) => {
         const promotionsWrapper = document.createElement('div');
         promotionsWrapper.className = 'cart-item-promotions';
